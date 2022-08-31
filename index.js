@@ -1,18 +1,14 @@
+
 function isPalindrome(word) {
   // Write your algorithm here
+  var word = word.toLowerCase();
+	var wordArray = word.split("");
+	var reverseWord = wordArray.reverse().join("");
+	return word === reverseWord ? true : false;
 }
 
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
-
-// You can run `node index.js` to view these console logs
 if (require.main === module) {
-  // add your own custom tests in here
+
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
@@ -23,3 +19,4 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
